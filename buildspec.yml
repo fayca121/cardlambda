@@ -18,8 +18,8 @@ phases:
   build:
     commands:
       - echo Start build...
-      - CGO_ENABLED=0 go build -o cardlambda main.go
-      - zip lambda-handler.zip cardlambda
+      - CGO_ENABLED=0 go build -o bootstrap main.go
+      - zip lambda-handler.zip bootstrap
   post_build:
     commands:
       - echo Start post_build...
